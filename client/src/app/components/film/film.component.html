@@ -1,0 +1,33 @@
+<a routerLink="/proposer">
+    <button>PROPOSER</button>
+</a>
+<br>
+<a routerLink="/concours">
+    <button>CONCOURS</button>
+</a>
+<br>
+<a routerLink="/affiches">
+    <button>A L'AFFICHE</button>
+</a>
+<br>
+<a routerLink="/oscars">
+    <button>OSCARS</button>
+</a>
+<br>
+<h2>FILM :</h2>
+<p>titre: {{currentFilm.titre}}</p>
+<p>accroche: {{currentFilm.accroche}}</p>
+<p>(genre...)</p>
+<p>resumé-pitch : {{currentFilm.pitch}}</p>
+<p>note d'intention: {{currentFilm.note}}</p>
+<p>casting: {{currentFilm.casting}} </p>
+<p>(divers)</p>
+<p>auteur: {{currentFilm.pseudo}}</p>
+<p>score public :  <img  height='50px' [src]="'./../../../assets/'+votePublic+'.png'" alt=""></p>
+<p>votez : 
+<img (mouseover)='survol(1)' (mouseout)='devol()' (click)="voter(1)" height="50px" [src]="'./../../../assets/'+vote1+'.png'" alt=""> 
+<img (mouseover)='survol(2)' (mouseout)='devol()' (click)="voter(2)" height="50px" [src]="'./../../../assets/'+vote2+'.png'" alt="" > 
+<img (mouseover)='survol(3)' (mouseout)='devol()' (click)="voter(3)" height="50px" [src]="'./../../../assets/'+vote3+'.png'" alt=""> 
+<img (mouseover)='survol(4)' (mouseout)='devol()' (click)="voter(4)" height="50px" [src]="'./../../../assets/'+vote4+'.png'" alt=""> 
+<img (mouseover)='survol(5)' (mouseout)='devol()' (click)="voter(5)" height="50px" [src]="'./../../../assets/'+vote5+'.png'" alt=""> 
+</p>

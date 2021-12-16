@@ -1,0 +1,77 @@
+<a routerLink="/concours">
+    <button>CONCOURS</button>
+</a>
+<br>
+<a routerLink="/affiches">
+    <button>A L'AFFICHE</button>
+</a>
+<br>
+<a routerLink="/oscars">
+    <button>OSCARS</button>
+</a>
+<br>
+<p>proposer un film : </p>
+<p *ngIf="messageVis">Votre proposition de film a été envoyée avec succès.</p>
+<div>
+    Pseudo:
+    <input 
+    type="text" 
+    name="pseudo" 
+    [(ngModel)]="film.pseudo" 
+    required>
+</div>
+<div>
+    Email:
+    <input 
+    type="text" 
+    name="email" 
+    [(ngModel)]="film.email" 
+    required>
+</div>
+<div>
+    Titre:
+    <input 
+    type="text" 
+    name="titre" 
+    [(ngModel)]="film.titre" 
+    required>
+</div>
+<div>
+    Accroche:
+    <input 
+    type="text" 
+    name="accroche" 
+    [(ngModel)]="film.accroche" 
+    required>
+</div>
+
+<div>
+    Pitch:
+    <input 
+    type="text" 
+    name="pitch" 
+    [(ngModel)]="film.pitch" 
+    required>
+</div>
+<div>
+    Casting:
+    <input 
+    type="text" 
+    name="casting" 
+    [(ngModel)]="film.casting" 
+    >
+</div>
+<div>
+    Note d'intention:
+    <input 
+    type="text" 
+    name="note" 
+    [(ngModel)]="film.note" 
+    >
+</div>
+
+<button (click)="poster()">POSTER</button>
+<br>
+<br>
+<img (click)="random()" height="100px" src="./../../../assets/ampoule.png" alt="ampoule">
+<p *ngIf="clikIdee">{{ideeRandom}}</p>

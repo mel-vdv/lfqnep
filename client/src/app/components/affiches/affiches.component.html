@@ -1,0 +1,16 @@
+<a routerLink="/proposer">
+    <button>PROPOSER</button>
+</a>
+<br>
+<a routerLink="/concours">
+    <button>CONCOURS</button>
+</a>
+<br>
+<a routerLink="/oscars">
+    <button>OSCARS</button>
+</a>
+<br>
+<h2>FILMS A L'AFFICHE:</h2>
+<ul *ngFor="let film of list">
+    <li><a [routerLink]="'/film/'+film.titre">{{film.titre}}</a></li>
+</ul>

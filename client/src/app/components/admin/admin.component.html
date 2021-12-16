@@ -1,0 +1,17 @@
+<h2>espace administrateur</h2>
+Identifiant:
+<input type="text"
+name="identifiant"
+[ngModel]="identifiant"
+required>
+Mot de Passe :
+<input type="password"
+required
+name="mdp"
+[(ngModel)]="mdp">
+<button (click)="controle()">ACCES ADMIN</button>
+
+<h3>films en attente de validation : </h3>
+<ul *ngFor="let attente of attentes"> <!--pas oublier le let !!!!-->
+    <li>{{attente.titre}}</li>
+</ul>
